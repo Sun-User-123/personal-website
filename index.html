@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun User的个人网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 导航栏 */
+        nav {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #3498db;
+        }
+        
+        /* 头部区域 */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* 容器 */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        /* 关于我 */
+        .about {
+            margin-bottom: 3rem;
+        }
+        
+        .about h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about p {
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+        
+        /* 技能 */
+        .skills {
+            margin-bottom: 3rem;
+        }
+        
+        .skills h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        
+        .skill-tag {
+            background: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* 项目经历 */
+        .projects {
+            margin-bottom: 3rem;
+        }
+        
+        .projects h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3498db;
+        }
+        
+        .project-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* 联系方式 */
+        .contact {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .contact h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .contact-link:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1a252f;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 头部区域 -->
+    <section class="hero" id="home">
+        <img src="https://via.placeholder.com/150/667eea/ffffff?text=S" alt="头像">
+        <h1>Sun User</h1>
+        <p>华北水利水电大学 · 软件工程专业</p>
+        <p>热爱编程，关注人工智能技术</p>
+    </section>
+    
+    <!-- 主内容 -->
+    <div class="container">
+        <!-- 关于我 -->
+        <section class="about" id="about">
+            <h2>关于我</h2>
+            <p>
+                我是华北水利水电大学软件工程专业的一名大三学生，对人工智能和软件开发充满热情。
+                在校期间，我认真学习专业课程，同时积极参与各类实践活动和项目开发。
+            </p>
+            <p>
+                通过《科技前沿系列讲座》课程，我深入学习了生成式大模型在编程中的应用，
+                包括DeepSeek、GitHub Copilot等工具的使用。这让我对AI辅助编程有了更深刻的理解。
+            </p>
+            <p>
+                未来，我希望继续深造，在人工智能领域做出自己的贡献。
+            </p>
+        </section>
+        
+        <!-- 技能 -->
+        <section class="skills" id="skills">
+            <h2>技能特长</h2>
+            <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">数据结构</span>
+                <span class="skill-tag">算法设计</span>
+                <span class="skill-tag">机器学习</span>
+                <span class="skill-tag">深度学习</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Docker</span>
+            </div>
+        </section>
+        
+        <!-- 项目经历 -->
+        <section class="projects" id="projects">
+            <h2>项目经历</h2>
+            
+            <div class="project-item">
+                <h3>个人简介网站开发</h3>
+                <p>
+                    使用DeepSeek辅助编程，快速完成了个人简介网站的开发和部署。
+                    网站采用响应式设计，支持多设备访问。
+                </p>
+                <p><strong>技术栈：</strong>HTML, CSS, JavaScript, GitHub Pages</p>
+            </div>
+            
+            <div class="project-item">
+                <h3>学生信息管理系统</h3>
+                <p>
+                    作为课程设计项目，开发了一个学生信息管理系统，
+                   实现了学生数据的增删改查功能。
+                </p>
+                <p><strong>技术栈：</strong>Java, MySQL, JDBC</p>
+            </div>
+            
+            <div class="project-item">
+                <h3>基于CNN的图像分类研究</h3>
+                <p>
+                    在老师的指导下，研究使用卷积神经网络进行图像分类，
+                   了解了深度学习的基本原理和应用。
+                </p>
+                <p><strong>技术栈：</strong>Python, TensorFlow, OpenCV</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- 联系方式 -->
+    <section class="contact" id="contact">
+        <h2>联系方式</h2>
+        <div class="contact-links">
+            <a href="mailto:2995562135@qq.com" class="contact-link">📧 邮箱</a>
+            <a href="https://github.com/Sun-User-123" class="contact-link">💻 GitHub</a>
+            <a href="https://gitee.com/Sun-User-123" class="contact-link">🐱 码云</a>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2026 Sun User 的个人网站 | 由 DeepSeek 辅助开发</p>
+    </footer>
+    
+    <!-- 平滑滚动 -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
